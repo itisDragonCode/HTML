@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="innerContainer">
+            <div id="rgbValue">
+                Try rgb
+            </div>
+            <div id="range">
+                <input type="range" onchange="valueRedChnge()" name="" id="red" min="0" max="255">
+                <input type="range" onchange="valueGreenChnge()" name="" id="green" min="0" max="255">
+                <input type="range"  onchange="valueBlueChnge()" name="" id="blue" min="0" max="255">
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    #innerContainer {
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    #rgbValue {
+        padding: 5px;
+        text-align: center;
+        background-color: white;
+        border: 2px solid black;
+        font-size: 20px;
+    }
+
+    #container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #range {
+        padding: 10px;
+        border: 2px solid black;
+        background-color: white;
+        margin-top: 20vh;
+        display: flex;
+        justify-content: row;
+    }
+</style>
+<script>
+    let red = document.getElementById("red");
+    let green = document.getElementById("green");
+    let blue = document.getElementById("blue");
+    let rgbValue = document.getElementById("rgbValue");
+    let container = document.getElementById("container");
+
+    container.style.backgroundColor = "rgb(150,150,150)";
+    valueRedChnge = () => {
+        container.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`;
+        rgbValue.innerHTML = `rgb(${red.value},${green.value},${blue.value})`;
+    }
+
+    valueGreenChnge = () => {
+        container.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`;
+        rgbValue.innerHTML = `rgb(${red.value},${green.value},${blue.value})`;
+
+    }
+
+    valueBlueChnge = () => {
+        container.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`;
+        rgbValue.innerHTML = `rgb(${red.value},${green.value},${blue.value})`;
+
+    }
+
+
+</script>
+
+</html>
