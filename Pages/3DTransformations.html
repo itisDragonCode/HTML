@@ -14,28 +14,29 @@
                 This is div eleemnt
             </div>
             <div id="range">
-                <input type="range" onchange="valueX_Rotate()" name="" id="x" min="0" max="366" value="0">
-                <input type="range" onchange="valueY_Rotate()" name="" id="y" min="0" max="366" value="0">
-                <input type="range"  onchange="valueZ_Rotate()" name="" id="z" min="0" max="366" value="0">
+                <input type="range" onchange="valueX_Rotate()" name="" id="x" min="0" max="360" value="0">
+                <input type="range" onchange="valueY_Rotate()" name="" id="y" min="0" max="360" value="0">
+                <input type="range" onchange="valueZ_Rotate()" name="" id="z" min="0" max="360" value="0">
             </div>
         </div>
     </div>
 </body>
 <style>
-    *{
+    * {
         box-sizing: border-box;
     }
+
     #innerContainer {
         display: flex;
         flex-direction: column;
-       
+
     }
 
     #element {
-       width: 400;
-       height: 250px;
-       background-color: green;
-       border: 5px solid red;
+        width: 400;
+        height: 250px;
+        background-color: green;
+        border: 5px solid red;
     }
 
     #container {
@@ -56,24 +57,24 @@
     }
 </style>
 <script>
-    let x_axsis = document.getElementById("x");
-    let y_axsis = document.getElementById("y");
-    let z_axsis = document.getElementById("z");
+    let x_axis = document.getElementById("x");
+    let y_axis = document.getElementById("y");
+    let z_axis = document.getElementById("z");
     let element = document.getElementById("element");
     let container = document.getElementById("container");
 
     valueX_Rotate = () => {
-        element.style.transform =`rotateX(${x_axsis.value}deg)`;
-        
+        element.style.transform = `rotateX(${x_axis.value}deg)`;
+
     }
 
     valueY_Rotate = () => {
-        element.style.transform =`rotateY(${y_axsis.value}deg)`;
+        element.style.transform = `rotateY(${y_axis.value}deg)`;
 
     }
 
     valueZ_Rotate = () => {
-        element.style.transform =`rotateZ(${z_axsis.value}deg)`;
+        element.style.transform = `rotateZ(${z_axis.value}deg)`;
 
     }
 
